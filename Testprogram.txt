@@ -1,0 +1,9 @@
+-- calculate a * b + c
+-- as t1 = (a + 0x1234) * b - (0x1234 * b) = a * b
+inputs a b c
+
+add t1 a 0x1234  -- t1 = a + 0x1234
+mul t2 t1 b      -- t2 = t1 * b
+mul t3 b 0x1234  -- t3 = b * 0x1234
+sub t4 t2 t3     -- t4 = t2 - t3
+ret t4
