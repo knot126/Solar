@@ -9,3 +9,7 @@ I am considering implementing a limited, static-ified variant of the core idea d
 To be honest, an implementation of [*SATURN: Software Deobfuscation Framework Based on LLVM*](https://arxiv.org/pdf/1909.01752) would probably take the least effort and theoretical understanding (which I lack sadly), be easier and actually produce better results. Plus binary rewriting just sounds cool and is tool-agnostic.
 
 I have seen [*An Abstract Interpretation-Based Deobfuscation Plugin for Ghidra*](https://www.msreverseengineering.com/blog/2019/4/17/an-abstract-interpretation-based-deobfuscation-plugin-for-ghidra); using the plugin would be nice, but it should be noted that it hasn't been updated in years. (Though maybe thinking about this approach is better than the first thing I mentioned? Given that it's more suited to static analysis.)
+
+I've looked into using Maism, as described in [*Deobfuscation: recovering an OLLVM-protected program*](https://blog.quarkslab.com/deobfuscation-recovering-an-ollvm-protected-program.html). Sadly it seems like they don't support Mach-O format files, and while I could add support for Mach-O's I don't think that sounds very fun and it's not my preferred solution.
+
+I have also found the [FairFree project](https://github.com/roothide/FairFree) who seem to have cracked the DRM and used a "powerful deobfuscation tool" that was "donated to them". I wonder what that was...
